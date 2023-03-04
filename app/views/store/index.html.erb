@@ -1,0 +1,23 @@
+<div class = 'store'>
+<% if notice %>
+<aside id = 'notice'><%= notice %></aside>
+<% end %>
+
+<h1>Your Programatic Catalog</h1>
+
+<ul class = 'catalog' >
+ <% @product.each do |product|%>
+   <li>
+   <%= image_tag(product.image_url)%>
+   <h2>product.title</h2>
+   <p>
+   <%= sanitize(product.desc)%>
+   </p>
+   <div class='price'>
+    <%= number_to_currency(product.price) %>
+    <%= button_to 'Add To Cart', line_items_path(product_id:product)%>
+   </div>
+   </li>
+ <%end%>
+</ul>
+</div>

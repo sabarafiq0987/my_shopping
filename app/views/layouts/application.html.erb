@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyShopping</title>
+    <title>Pragprog Bag Online Store</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,21 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+  <header class="main">
+  </header>
+      <div class="content">
+       <nav class="side_nav">
+       <%= image_tag 'logo.png', alt: 'The Pragmatic BagShelf' %>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/questions">Questions</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+       </nav>
+        <main class= <%= controller.controller_name %>'>
+        <%= yield %>
+        </main>
+    </div>
+    </body>
+	</html>
