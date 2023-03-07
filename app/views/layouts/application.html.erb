@@ -25,6 +25,9 @@
         <main class= <%= controller.controller_name %>'>
         <%= yield %>
         </main>
+        <div id = 'cart'>
+       <%= render @cart%>
+       </div>
     </div>
     </body>
 	</html>
