@@ -24,10 +24,10 @@
        </nav>
         <main class= <%= controller.controller_name %>'>
         <%= yield %>
+        <div id ='cart'>
+        <%= render_if @cart&&@cart.line_items.any?,@cart%>
+        </div>
         </main>
-        <div id = 'cart'>
-       <%= render @cart%>
-       </div>
     </div>
     </body>
 	</html>

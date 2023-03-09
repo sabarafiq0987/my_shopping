@@ -50,7 +50,6 @@ class CartsController < ApplicationController
 
   # DELETE /carts/1 or /carts/1.json
   def destroy
-    byebug
     if @cart.id == session[:cart_id]
       @cart.destroy
       session[:cart_id] = nil

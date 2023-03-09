@@ -9,13 +9,15 @@
  <% @product.each do |product|%>
    <li>
    <%= image_tag(product.image_url)%>
-   <h2>product.title</h2>
+   <h2><%=product.title%></h2>
    <p>
    <%= sanitize(product.desc)%>
    </p>
    <div class='price'>
     <%= number_to_currency(product.price) %>
     <%= button_to 'Add To Cart', line_items_path(product_id:product),remote: true%>
+   </div>
+   <div id ='cart'>
    </div>
    </li>
  <%end%>
